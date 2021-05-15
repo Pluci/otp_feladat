@@ -21,7 +21,7 @@ public class Test_IdentificationRepository {
     }
 
     @Test
-    public void testCreateId(){
+    public void testCreateIdentification(){
         Identification expected = new Identification("WS01", "A01");
 
         Identification actual = this.repository.create(expected);
@@ -30,7 +30,7 @@ public class Test_IdentificationRepository {
     }
 
     @Test
-    public void testGetId(){
+    public void testGetIdentification(){
         Identification test_identification = new Identification("WS01", "A01");
         Identification expected = this.repository.create(test_identification);
 
@@ -40,7 +40,7 @@ public class Test_IdentificationRepository {
     }
 
     @Test
-    public void testUpdateId(){
+    public void testUpdateIdentification(){
         Identification test_identification = new Identification("WS01", "A01");
         Identification expected = this.repository.create(test_identification);
         expected.setCustomerId("V31");
@@ -50,7 +50,7 @@ public class Test_IdentificationRepository {
     }
 
     @Test(expected = IndexOutOfBoundsException.class)
-    public void testDeleteId(){
+    public void testDeleteIdentification(){
         Identification test_identification = new Identification("WS01", "A01");
         Identification expected = this.repository.create(test_identification);
         this.repository.delete(expected);

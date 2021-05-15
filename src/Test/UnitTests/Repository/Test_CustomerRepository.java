@@ -54,7 +54,7 @@ public class Test_CustomerRepository {
     }
 
     @Test(expected = IndexOutOfBoundsException.class)
-    public void testDeleteId(){
+    public void testDeleteCustomer(){
         Identification customerIdentification = new Identification("WS01", "A01");
         Customer test_customer = new Customer(customerIdentification, "Kovács János", "Bp. 1192 Kosárfonó u. 18");
         Customer expected = this.repository.create(test_customer);
